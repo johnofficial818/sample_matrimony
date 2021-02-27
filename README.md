@@ -3,5 +3,5 @@
 To install libraries
 # npm install
 
-To run
+To runn
 # ng serve
