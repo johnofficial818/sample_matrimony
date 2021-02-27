@@ -1,0 +1,84 @@
+<form #salary="ngForm">
+  <table>
+    <tr>
+      <th> Looking for : </th>
+      <td><input type="radio" name=gender value=male ngModel required #gender="ngModel">Male</td>
+      <td><input type="radio" name=gender value=female ngModel required #gender="ngModel">Female</td>
+      <th>Age : </th>
+      <td>
+        <select name="fromage" ngModel class="form-control">
+          <option *ngFor="let age of prin">{{age}}</option>
+        </select>
+      </td>
+      <td> TO </td>
+      <td>
+        <select name="toage" ngModel class="form-control">
+          <option *ngFor="let age of prin">{{age}}</option>
+        </select>
+      </td>
+      <th>Marital Status :</th>
+      <td><select name="maritalStatus" ngModel class="form-control">
+          <option value="married">Married</option>
+          <option value="single">Single</option>
+          <option value="divorce">Divorce</option>
+          <option value="widow">Widow</option>
+        </select>
+      </td>
+      <td><button (click)="getprofile(salary.value)"><b> SEARCH </b> </button></td>
+    </tr>
+  </table>
+</form>
+<br>
+
+<mat-card *ngFor="let item of bata">
+  <a>
+    <mat-hint class="lab"></mat-hint><b>{{ item.userId}}</b>
+  </a> <br>
+  <input type="image" img src="{{ item.image}}" width="180" height="200">
+
+
+
+  <div class="boxsize">
+    <table>
+      <tr>
+        <td class="tab">Name </td>
+        <td><a>
+            <mat-hint class="lab"></mat-hint> {{ item.name}}
+          </a><br></td>
+      </tr>
+      <tr>
+        <td class="tab">Age </td>
+        <td><a>
+            <mat-hint class="lab"></mat-hint> {{ item.age}}
+          </a><br>
+        </td>
+      </tr>
+      <tr>
+        <td class="tab">Qualification </td>
+        <td><a>
+            <mat-hint class="lab"></mat-hint> {{ item.qualification}}
+          </a><br>
+        </td>
+      </tr>
+      <tr>
+        <td class="tab">Horoscope </td>
+        <td><a>
+            <mat-hint class="lab"></mat-hint> {{ item.horoscope}}
+          </a><br>
+        </td>
+      </tr>
+      <tr>
+        <td class="tab">Star </td>
+        <td><a>
+            <mat-hint class="lab"></mat-hint> {{ item.star}}
+          </a><br></td>
+      </tr>
+      <tr>
+        <td class="tab">Phone </td>
+        <td><a>
+            <mat-hint class="lab"></mat-hint> {{ item.phone}}
+          </a><br></td>
+      </tr>
+    </table>
+  </div>
+</mat-card>

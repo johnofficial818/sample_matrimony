@@ -1,0 +1,144 @@
+<div class="bgc">
+  <div class="textcolor">
+    <form #registration="ngForm">
+      <mat-grid-list [cols]="14" rowHeight="4:3">
+
+
+        <mat-grid-tile [colspan]="7" [rowspan]="14">
+          <img src="https://www.thestatesman.com/wp-content/uploads/2020/02/QT-O4-9.jpg">
+        </mat-grid-tile>
+
+        <mat-grid-tile [colspan]="7" [rowspan]="1">
+          <mat-form-field appearance="fill">
+            <mat-label><b>Profile name</b></mat-label>
+            <input matInput placeholder="Profile name" [(ngModel)]="bata.name" name="bata.name" required>
+          </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile [colspan]="7" [rowspan]="1">
+          <mat-radio-group [(ngModel)]="bata.gender" name="bata.gender" aria-label="Select an option">
+            <mat-radio-button value="male" name="bata.gender" required>Male </mat-radio-button>
+            <mat-radio-button value="female" name="bata.gender" required> Female </mat-radio-button>
+          </mat-radio-group>
+        </mat-grid-tile>
+
+        <mat-grid-tile [colspan]="7" [rowspan]="1">
+          <mat-form-field appearance="fill">
+            <mat-label><b>Enter your email</b></mat-label>
+            <input matInput placeholder="pat@example.com" [(ngModel)]="bata.email" name="bata.email" required>
+          </mat-form-field>
+        </mat-grid-tile>
+
+
+
+        <mat-grid-tile [colspan]="7" [rowspan]="1">
+          <mat-form-field appearance="fill">
+            <mat-label><b>Age</b></mat-label>
+            <input matInput placeholder="Placeholder" [(ngModel)]="bata.age" name="bata.age" required>
+          </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile [colspan]="7" [rowspan]="1">
+          <mat-form-field appearance="fill">
+            <mat-label><b>Qualification</b></mat-label>
+            <input matInput placeholder="Placeholder" [(ngModel)]="bata.qualification" name="bata.qualification"
+              required>
+          </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile [colspan]="7" [rowspan]="1">
+          <mat-form-field appearance="fill">
+            <mat-label><b>Martial Status</b></mat-label>
+            <mat-select name="maritalStatus" [(ngModel)]="bata.maritalStatus" name="bata.maritalStatus" required>
+              <mat-option>None</mat-option>
+              <mat-option value="married">Married</mat-option>
+              <mat-option value="single">Single</mat-option>
+              <mat-option value="divorce">Divorce</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile [colspan]="7" [rowspan]="1">
+          <mat-form-field appearance="fill">
+            <mat-label><b>Mother Tongue</b></mat-label>
+            <mat-select name="MotherTongue" [(ngModel)]="bata.motherTongue" name="bata.motherTongue" required>
+              <mat-option>None</mat-option>
+              <mat-option value="tamil">Tamil</mat-option>
+              <mat-option value="english">English</mat-option>
+              <mat-option value="hindi">Hindi</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile [colspan]="7" [rowspan]="1">
+          <mat-form-field appearance="fill">
+            <mat-label><b>Zodiac</b></mat-label>
+            <mat-select name="zodiac" [(ngModel)]="bata.zodiac" name="bata.zodiac" required>
+              <mat-option *ngFor="let zodiac of zodiacs" [value]="zodiac">{{zodiac}} </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile [colspan]="7" [rowspan]="1">
+          <mat-form-field appearance="fill">
+            <mat-label><b>star</b></mat-label>
+            <mat-select name="star" [(ngModel)]="bata.star" name="bata.star" required>
+              <mat-option *ngFor="let star of stars" [value]="star">{{star}} </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile [colspan]="7" [rowspan]="1">
+          <mat-form-field appearance="fill">
+            <mat-label><b>Choose a date</b></mat-label>
+            <input matInput [matDatepicker]="picker" [(ngModel)]="bata.dob" name="bata.dob" required>
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile [colspan]="7" [rowspan]="1">
+          <mat-form-field appearance="fill" class="example-full-width">
+            <mat-label><b>Mobile Number</b></mat-label>
+            <span matPrefix>+91 &nbsp;</span>
+            <input type="tel" matInput placeholder="1245-678-090" [(ngModel)]="bata.contact" name="bata.contact"
+              required>
+            <mat-icon matSuffix>mode_edit</mat-icon>
+          </mat-form-field>
+        </mat-grid-tile>
+
+
+        <mat-grid-tile [colspan]="7" [rowspan]="1">
+          <mat-form-field appearance="fill">
+            <mat-label><b>New Password</b></mat-label>
+            <input matInput [type]="hide ? 'password': 'text'" [(ngModel)]="bata.password" name="bata.password"
+              required>
+            <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' :
+              'visibility_off'}}</mat-icon>
+            <mat-error *ngIf="passFormControl.hasError('required')">
+            </mat-error>
+          </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile [colspan]="7" [rowspan]="1">
+          <mat-form-field appearance="fill">
+            <mat-label><b>Confirm Password</b></mat-label>
+            <input matInput [type]="hide ?  'password' : 'text'" [(ngModel)]="bata.confirmPassword"
+              name="bata.confirmPassword" required>
+            <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' :
+              'visibility_off'}}</mat-icon>
+            <mat-error *ngIf="confirmFormControl.hasError('required')">Confirm your password
+            </mat-error>
+          </mat-form-field>
+        </mat-grid-tile>
+
+        <div class="button">
+          <mat-grid-tile [colspan]="7" [rowspan]="1">
+            <button mat-raised-button color="accent" (click)="register()"> REGISTER</button>
+          </mat-grid-tile>
+        </div>
+
+      </mat-grid-list>
+    </form>
+  </div>
+</div>

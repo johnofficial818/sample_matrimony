@@ -1,0 +1,51 @@
+<mat-card *ngFor="let item of bata">
+
+  <a>
+    <mat-hint class="lab"></mat-hint> <b> {{ item.userId}} </b>
+  </a><br>
+  <input type="image" img src="{{item.image}}" width="180" height="200">
+
+
+  <table>
+    <tr>
+      <td class="tab">Name </td>
+      <td><a>
+          <mat-hint class="lab"></mat-hint> {{ item.name}}
+        </a><br></td>
+    </tr>
+    <tr>
+      <td class="tab">Age </td>
+      <td><a>
+          <mat-hint class="lab"></mat-hint> {{ item.age}}
+        </a><br>
+      </td>
+    </tr>
+    <tr>
+      <td class="tab">Qualification </td>
+      <td><a>
+          <mat-hint class="lab"></mat-hint> {{ item.qualification}}
+        </a><br>
+      </td>
+    </tr>
+    <tr>
+
+      <td class="tab">zodiac </td>
+      <td><a>
+          <mat-hint class="lab"></mat-hint> {{ item.zodiac}}
+        </a><br>
+      </td>
+    </tr>
+    <tr>
+
+      <td class="tab">Star </td>
+      <td><a>
+          <mat-hint class="lab"></mat-hint> {{ item.star}}
+        </a><br></td>
+    </tr>
+    <tr>
+      <td class="tab">Contact </td>
+      <td><a>
+          <mat-hint class="lab"></mat-hint> {{ item.contact}}
+        </a><br></td>
+    </tr>
+  </table>

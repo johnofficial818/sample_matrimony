@@ -1,0 +1,46 @@
+<form #upload="ngForm">
+
+  <div class="main">
+
+
+    <h2>UPLOAD UR PROFILE</h2>
+    <br>
+
+    <label><b>Profile name</b></label><input type="text" ngModel placeholder="Profile Name" name="name"><br>
+    <br>
+    <br>
+    <label> Gender : </label><input type="radio" name="gender" value="male" ngModel required #gender="ngModel">Male
+    <input type="radio" name="gender" value="Female" ngModel required #gender="ngModel">Female
+    <br>
+    <br>
+
+
+
+    <label>dob</label><input type="date" ngModel name="dob" required>
+    <br>
+    <br>
+    <br>
+
+    <label><b>Martial Status</b></label>
+    <select name="maritalStatus" ngModel class="form-control">
+      <option>None</option>
+      <option value="married">Married</option>
+      <option value="single">Single</option>
+      <option value="divorce">Divorce</option>
+    </select>
+    <br>
+    <br>
+    <br>
+    <!-- <input type="file" name="file" (change)="onFileSelected($event)" />
+  <br>
+  <br>
+  <br> -->
+
+
+
+    <label>upload photo in your googledrive and make it as public and share the link below</label><input type="image" img src="https://drive.google.com/file/d/1tUbx2ajNb2zHh48lCCu_Q9dghrvNpa0m/view?usp=sharing" ngModel name="file" required>
+    <br>
+    <br>
+    <button (click)="send(upload.value)"> UPLOAD</button>
+
+  </div>

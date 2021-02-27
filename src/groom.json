@@ -1,0 +1,64 @@
+[{
+  "id":"SM0001",
+  "name":"VIRAT KOHLI",
+  "age":"28",
+  "image":"https://storAGE.googleapis.com/afs-prod/media/99509de3f8464926860ea2a0f8e055c5/800.jpeg",
+  "horoscope":"PISCES",
+  "star":"ARIES ",
+  "contact":"987672446",
+  "edu":"BE"
+},
+{
+  "id":"SM0002",
+  "name":"CHRIS GAYLE",
+  "age":"32",
+  "image":"https://storAGE.googleapis.com/afs-prod/media/2a5939569282438bb0b8206cfd8764b6/1000.jpeg",
+  "horoscope":"SCORPIO",
+  "star":"TAURUS ",
+  "contact":"987622446",
+  "edu":"BE"
+
+},
+{
+  "id":"SM0003",
+  "name":"SMITH",
+  "age":"23",
+  "image":"https://storAGE.googleapis.com/afs-prod/media/5ed32a911979424584afff74e8dcd79b/1000.jpeg",
+  "horoscope":"CANCER",
+  "star":"GEMINI",
+  "contact":"987222446",
+  "edu":"BE"
+},
+{
+  "id":"ARCHER",
+  "name":23,
+  "age":"23",
+  "image":"https://storAGE.googleapis.com/afs-prod/media/70f0e20117804340bd0b97454c0e9950/1000.jpeg",
+  "horoscope":"PISCES",
+  "star":"TAURUS 4L",
+  "contact":"987602446",
+  "edu":"BE"
+
+},
+{
+  "id":"SM0005",
+  "name":"RASHID",
+  "age":"23",
+  "image":"https://storAGE.googleapis.com/afs-prod/media/fcf044ea62984c2fbea82001c389bf39/1000.jpeg",
+  "horoscope":"SCORPIO",
+  "star":"GEMINI",
+  "contact":"987622446",
+  "edu":"BE"
+},
+{
+  
+  "id":"SM0006",
+  "name":"SACHIN",
+  "age":"23",
+  "image":"https://i1.wp.com/news.jugaadin.com/wp-content/uploads/2020/07/sachin-tendulkar.jpg?resize=474%2C352",
+  "horoscope":"CANCER",
+  "star":"2L",
+  "contact":"987642246",
+  "edu":"ARIES "
+}
+]
